@@ -230,4 +230,18 @@ footer {
     .section {
         padding: 50px 15px;
     }
+
+}
+/* Center the last project card in the Projects section */
+#projects .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    justify-items: center;   /* Ensures all cards are centered within their grid space */
+}
+
+/* Force only the last (third) project card to appear in the center */
+#projects .card-grid .card:last-child {
+    grid-column: 1 / -1;     /* Span across the entire row */
+    justify-self: center;    /* Place it exactly in the middle */
 }
